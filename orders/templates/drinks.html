@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %} 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Managment</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Font Awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+
+    <!-- Custom CSS file link -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<header>
+
+    <a href="#" class="logo"><i class="fas fa-utensils"></i>Restaurant Managment</a>
+
+    <nav class="navbar">
+        <a href="{% url 'home' %}">Home</a>
+        <a class="active" href="{% url 'drinks' %}">Drinks</a>
+        <a href="{% url 'bakeds' %}">Baked Goods</a>
+        <a href="{% url 'sweets' %}">Sweets</a>
+        <a href="{% url 'fastFood' %}">Snacks</a>
+        <a href="{% url 'orders' %}">Add Order</a>
+        <a href="#order">Contact Us</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-shopping-cart"></a>
+    </div>
+
+</header>
+
+<body style="background: color #BEA77A PP 9px;">
+   
+    <section class="home" id="home">
+        <div class="swiper-container home-slider">
+            <div class="swiper-wrapper wrapper">
+    
+                <div class="swiper-slide slide">
+                    <div class="content">
+                        <span>Drinks</span>
+                        <h3>Hot Beverages</h3>
+                        <h3>Iced Beverages</h3>
+                        <h3>Fresh Juices</h3>
+                        <p>Everything you need under one roof</p>
+                        <a href="#" class="btn">Order Now</a>
+                    </div>
+                    <div class="image">
+                        <img src="{% static 'images/drinks.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    
+    <!-- Drinks section starts -->
+    
+    <section class="drinks" id="drinks">
+    
+        <h3 class="sub-heading"> Drinks Menu </h3>
+        <h1 class="heading">Popular Drinks</h1>
+    
+        <div class="box-container">
+    
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="{% static 'images/drink-1.png' %}" alt="">
+                <h3>Chocolate Coffee</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span>$15.99</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+    
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="{% static 'images/drink-2.png' %}" alt="">
+                <h3>StarX Coffee</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span>$15.99</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+    
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="{% static 'images/drink-3.png' %}" alt="">
+                <h3>Green Tea</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span>$15.99</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+    
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="{% static 'images/drink-4.png' %}" alt="">
+                <h3>Black Coffee</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span>$15.99</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+    
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="{% static 'images/drink-5.png' %}" alt="">
+                <h3>Milk Tea</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span>$15.99</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+    
+        </div>
+    
+        <h1 class="heading">Hot Beverages</h1>
+    
+        <!-- Similar boxes for hot drinks with placeholder names "tasty food" -->
+
+        <h1 class="heading">Juices</h1>
+    
+        <div class="box-container">
+    
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="{% static 'images/j-1.png' %}" alt="">
+                <h3>Orange Juice</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span>$15.99</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+    
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="{% static 'images/j-2.png' %}" alt="">
+                <h3>Apple Juice</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span>$15.99</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+    
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="{% static 'images/j-3.png' %}" alt="">
+                <h3>Watermelon Juice</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span>$15.99</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+    
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="{% static 'images/j-4.png' %}" alt="">
+                <h3>Lemon Juice</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span>$15.99</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+    
+            <div class="box">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+                <img src="{% static 'images/j-5.png' %}" alt="">
+                <h3>Strawberry Juice</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span>$15.99</span>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+    
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Our Branches</h3>
+                <a href="#">Saudi Arabia</a>
+                <a href="#">Qatar</a>
+                <a href="#">Bahrain</a>
+                <a href="#">Dubai</a>
+                <a href="#">Oman</a>
+            </div>
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="#">Home</a>
+                <a href="#">Drinks</a>
+                <a href="#">Breads</a>
+                <a href="#">Sweets</a>
+                <a href="#">Fast Food</a>
+                <a href="#">Add Order</a>
+            </div>
+            <div class="box">
+                <h3>Follow Us</h3>
+                <a href="#">+966 5000000</a>
+                <a href="#">065443</a>
+                <a href="#">Support@gmail.com</a>
+                <a href="#">Admin@gmail.com</a>
+                <a href="#">Al-Riyadh, Saudi Arabia - 400104</a>
+            </div>
+            <div class="box">
+                <h3>Contact Information</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+        <div class="credit"> All rights reserved by <span>Restaurant Managment</span> </div>
+    </section>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

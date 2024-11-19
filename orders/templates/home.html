@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %} 
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Restaurant Managment</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    
+<!-- header section starts -->
+
+<header>
+    <a href="#" class="logo"><i class="fas fa-utensils"></i>Restaurant Management</a>
+    <nav class="navbar">
+        <a class="active" href="{% url 'home' %}">Home</a>
+        <a href="{% url 'drinks' %}">Drinks</a>
+        <a href="{% url 'bakeds' %}">Breads</a>
+        <a href="{% url 'sweets' %}">Sweets</a>
+        <a href="{% url 'fastFood' %}">Fast Food</a>
+        <a href="{% url 'orders' %}">Add Order</a>
+        <a href="#order">Contact Us</a>
+    </nav>
+    
+    <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-shopping-cart"></a>
+    </div>
+</header>
+
+<!-- header section ends-->
+
+<!-- search form  -->
+
+<form action="" id="search-form">
+    <input type="search" placeholder="search here..." name="" id="search-box">
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+</form>
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+    <div class="swiper-container home-slider">
+        <div class="swiper-wrapper wrapper">
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Drinks</span>
+                    <h3>Hot Drinks</h3>
+                    <h3>Iced Coffee</h3>
+                    <h3>Fresh Juice</h3>
+                    <p>Everything you need can be found under one roof</p>
+                    <a href="#" class="btn">Order Now</a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'images/drinks.png' %}" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Sweets</span>
+                    <h3>Oriental Sweets</h3>
+                    <h3>Western Sweets</h3>
+                    <h3>Cinnamon Rolls</h3>
+                    <p>We are happy to serve you with rare varieties of sweets</p>
+                    <a href="#" class="btn">Order Now</a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'images/sweets1.png' %}" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Breads</span>
+                    <h3>Toasted Bread</h3>
+                    <h3>All Kinds of Pizza</h3>
+                    <h3>Fast Food</h3>
+                    <p>Ready for all occasions and events</p>
+                    <a href="#" class="btn">Order Now</a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'images/breads.png' %}" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Fast Food</span>
+                    <h3>Burgers</h3>
+                    <h3>Pizza</h3>
+                    <h3>Shawarma</h3>
+                    <p>Snacks with international recipes</p>
+                    <a href="#" class="btn">Order Now</a>
+                </div>
+                <div class="image">
+                    <img src="{% static 'images/fast5.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<!-- home section ends -->
+
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+    <h3 class="sub-heading">About</h3>
+    <h1 class="heading">Why Choose Us?</h1>
+    <div class="row">
+        <div class="image">
+            <img src="{% static 'images/bg.jpg' %}" alt="">
+        </div>
+        <div class="content">
+            <h3>The Finest Drinks in Town</h3>
+            <p>We strive to offer high-quality services to our dear guests by providing a variety of delicious hot and cold drinks, juices, and ice cream.</p>
+            <p>We also have a full range of breads, sweets, and snacks. Visit us to find what you love!</p>
+            <div class="icons-container">
+                <div class="icons">
+                    <i class="fas fa-shipping-fast"></i>
+                    <span>Free Delivery</span>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span>Easy Payments</span>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-headset"></i>
+                    <span>24/7 Service</span>
+                </div>
+            </div>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+</section>
+<!-- about section ends -->
+
+<!-- footer section starts -->
+
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Our Branches</h3>
+            <a href="#">Saudi Arabia</a>
+            <a href="#">Qatar</a>
+            <a href="#">Bahrain</a>
+            <a href="#">Dubai</a>
+            <a href="#">Oman</a>
+        </div>
+        <div class="box">
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="#">Drinks</a>
+            <a href="#">Breads</a>
+            <a href="#">Sweets</a>
+            <a href="#">Fast Food</a>
+            <a href="#">Add Order</a>
+        </div>
+        <div class="box">
+            <h3>Follow Us</h3>
+            <a href="#">+966 5000000</a>
+            <a href="#">065443</a>
+            <a href="#">Support@gmail.com</a>
+            <a href="#">Admin@gmail.com</a>
+            <a href="#">Al-Riyadh, Saudi Arabia - 400104</a>
+        </div>
+        <div class="box">
+            <h3>Contact Information</h3>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </div>
+    <div class="credit"> All rights reserved by <span>Restaurant Managment</span> </div>
+</section>
+
+<!-- footer section ends -->
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

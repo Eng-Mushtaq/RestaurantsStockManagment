@@ -3,13 +3,9 @@
 <head>
     {% load static %} 
     <meta charset="UTF-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <title>Restaurant Managment</title>
+    <title>Restaurant Management</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- custom css file link  -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
@@ -27,7 +23,6 @@
         <a href="{% url 'orders' %}">Add Order</a>
         <a href="#order">Contact Us</a>
     </nav>
-    
     <div class="icons">
         <i class="fas fa-bars" id="menu-bars"></i>
         <i class="fas fa-search" id="search-icon"></i>
@@ -36,7 +31,7 @@
     </div>
 </header>
 
-<!-- header section ends-->
+<!-- header section ends -->
 
 <!-- search form  -->
 
@@ -51,65 +46,29 @@
 <section class="home" id="home">
     <div class="swiper-container home-slider">
         <div class="swiper-wrapper wrapper">
+            {% for category in categories %}
             <div class="swiper-slide slide">
                 <div class="content">
-                    <span>Drinks</span>
-                    <h3>Hot Drinks</h3>
-                    <h3>Iced Coffee</h3>
-                    <h3>Fresh Juice</h3>
+                    <span>{{ category.name }}</span>
+                    <!-- Loop through products of this category -->
+                    {% for product in category.products.all %}
+                    <h3>{{ product.name }}</h3>
+                    {% endfor %}
                     <p>Everything you need can be found under one roof</p>
                     <a href="#" class="btn">Order Now</a>
                 </div>
                 <div class="image">
-                    <img src="{% static 'images/drinks.png' %}" alt="">
+                    <!-- Use the static tag to properly link the image path -->
+                    <img src="{% static category.image %}"  alt="{{ category.name }}">
                 </div>
             </div>
-            <div class="swiper-slide slide">
-                <div class="content">
-                    <span>Sweets</span>
-                    <h3>Oriental Sweets</h3>
-                    <h3>Western Sweets</h3>
-                    <h3>Cinnamon Rolls</h3>
-                    <p>We are happy to serve you with rare varieties of sweets</p>
-                    <a href="#" class="btn">Order Now</a>
-                </div>
-                <div class="image">
-                    <img src="{% static 'images/sweets1.png' %}" alt="">
-                </div>
-            </div>
-            <div class="swiper-slide slide">
-                <div class="content">
-                    <span>Breads</span>
-                    <h3>Toasted Bread</h3>
-                    <h3>All Kinds of Pizza</h3>
-                    <h3>Fast Food</h3>
-                    <p>Ready for all occasions and events</p>
-                    <a href="#" class="btn">Order Now</a>
-                </div>
-                <div class="image">
-                    <img src="{% static 'images/breads.png' %}" alt="">
-                </div>
-            </div>
-            <div class="swiper-slide slide">
-                <div class="content">
-                    <span>Fast Food</span>
-                    <h3>Burgers</h3>
-                    <h3>Pizza</h3>
-                    <h3>Shawarma</h3>
-                    <p>Snacks with international recipes</p>
-                    <a href="#" class="btn">Order Now</a>
-                </div>
-                <div class="image">
-                    <img src="{% static 'images/fast5.png' %}" alt="">
-                </div>
-            </div>
+            {% endfor %}
         </div>
         <div class="swiper-pagination"></div>
     </div>
 </section>
 
 <!-- home section ends -->
-
 
 <!-- about section starts  -->
 
@@ -142,6 +101,7 @@
         </div>
     </div>
 </section>
+
 <!-- about section ends -->
 
 <!-- footer section starts -->
@@ -181,14 +141,12 @@
             <a href="#">LinkedIn</a>
         </div>
     </div>
-    <div class="credit"> All rights reserved by <span>Restaurant Managment</span> </div>
+    <div class="credit"> All rights reserved by <span>Restaurant Management</span> </div>
 </section>
 
 <!-- footer section ends -->
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<!-- custom js file link  -->
 <script src="{% static 'js/script.js' %}"></script>
 
 </body>
